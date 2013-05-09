@@ -2,19 +2,31 @@ doctype html
 html
   head
     title = 'railswithprem'
-    = stylesheet_link_tag    "application", :media => "all"
+    = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
 
+  header
+    h2 Rails with Prem
+
   body id="content"
-    header
-      h1 = 'Rails with Prem'
+    wrapper
+      banner
+        home
+          = link_to 'Rails with Prem', articles_path
+        links
+          = link_to 'About', nil
+          = link_to 'https://github.com/premnirmal88' do
+            i class="icon-github-alt icon-large"
+          = link_to 'http://gplus.to/premnirmal88' do
+            i class="icon-google-plus icon-large"
+          
+      main
+        = yield        
+      nav
+        = render :partial => 'articles/index', :locals => {:articles => @articles}
 
-    content
-      = yield
+      #push
 
-    nav
-      /= render :partial => 'articles/index', :locals => {:articles => @articles}
-    
-    footer
-      | &copy Nirmal
+    #footer
+      | &copy Prem Nirmal

@@ -7,6 +7,10 @@ gem 'simplecov', :require => false, :group => :test
 gem 'rufus-scheduler' # to keep app loaded on heroku, prevent it from shutting down
 gem 'compass'
 gem 'compass-normalize'
+gem 'truncate_html'
+gem 'coderay'
+gem 'RedCloth'
+gem 'redcarpet'
 
 gem 'carrierwave'
 gem 'cloudinary'

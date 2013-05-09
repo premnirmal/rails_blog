@@ -1,0 +1,9 @@
+ul
+  h3 Articles
+  - @articles.each do |article|
+    li = link_to article.title.downcase, article
+
+ul
+  h3 Tags
+  - @tags.each do |tag|
+    li = tag

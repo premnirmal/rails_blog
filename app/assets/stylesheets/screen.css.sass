@@ -1,0 +1,44 @@
+@import base
+
+
+a
+  text-decoration: none
+  font-weight: bold
+  color: darkorange
+a:visited
+  color: darkorange
+a:hover,active
+  color: lighten(red,10%)
+
+main
+  font-family: $article-font
+  h1,h2,h3
+    font-family: $title-font
+  #code
+    background: beige
+    width: 30em
+    font-family: $code-font
+    font-color: black
+
+wrapper
+  margin: 0 auto 5em
+  min-height: 100%
+  height: auto !important
+  height: 100%
+
+header
+  margin-top: 1em
+  border-bottom: solid 1px dimgrey
+  border-top: solid 1px dimgrey
+  text-align: center
+  h2
+    font-family: $title-font
+    font-weight: none
+
+#footer
+  text-align: center
+  font-family: warnock-pro
+
+#footer,#push
+  height: 5em
+  clear: both
