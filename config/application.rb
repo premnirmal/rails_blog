@@ -18,8 +18,8 @@ module Blog
     Disqus::defaults[:account] = 'railswithprem'
     Disqus::defaults[:developer] = true # if you want to test it on the localhost
 
-    config.assets.initialize_on_precompile = false
     config.assets.precompile += %w(coderay.css.sass)
+    config.assets.initialize_on_precompile = false
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"

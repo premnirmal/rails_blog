@@ -1,13 +1,9 @@
 .CodeRay
-  background-color: #f8f8f8
-  border: 2px solid #f8f8f8
-  font-family: 'Courier New', 'Terminal', monospace
-  font-size: 11pt
-  color: #000
+  background-color: hsl(0, 0%, 95%)
+  border: 1px solid silver
+  color: black
   pre
     margin: 0px
-
-div.CodeRay!
 
 span.CodeRay
   white-space: pre
@@ -23,324 +19,227 @@ table.CodeRay
     vertical-align: top
 
 .CodeRay
-  .line_numbers, .no
-    background-color: #def
+  .line-numbers
+    background-color: hsl(180, 65%, 90%)
     color: gray
     text-align: right
-  .line_numbers
-    tt
-      font-weight: bold
+    -webkit-user-select: none
+    -moz-user-select: none
+    user-select: none
+    a
+      background-color: hsl(180, 65%, 90%) !important
+      color: gray !important
+      text-decoration: none !important
+      &:target
+        color: blue !important
     .highlighted
-      color: red
-  .no
+      color: red !important
+      a
+        color: red !important
+  span.line-numbers
     padding: 0px 4px
+  .line
+    display: block
+    float: left
+    width: 100%
   .code
     width: 100%
-
-/*    (don't know)
-/*    (don't know)
-
-ol.CodeRay
-  font-size: 10pt
-  li
-    white-space: pre
-
-.CodeRay
-  .code pre
-    overflow: auto
   .debug
     color: white !important
     background: blue !important
-  .af
-    color: #00C
-  .an
+  .annotation
     color: #007
-  .at
-    color: #f08
-  .av
+  .attribute-name
+    color: #b48
+  .attribute-value
     color: #700
-  .aw
-    color: #C00
-  .bi
+  .binary
     color: #509
-    font-weight: bold
-  .c
-    color: #888
-  .ch
-    color: #04D
-    .k
-      color: #04D
-    .dl
-      color: #039
-  .cl
+  .char
+    .content
+      color: #D20
+    .delimiter
+      color: #710
+    color: #D20
+  .class
     color: #B06
     font-weight: bold
-  .cm
+  .class-variable
+    color: #369
+  .color
+    color: #0A0
+  .comment
+    color: #777
+    .char, .delimiter
+      color: #444
+  .complex
     color: #A08
-    font-weight: bold
-  .co
+  .constant
     color: #036
     font-weight: bold
-  .cr
-    color: #0A0
-  .cv
-    color: #369
-  .de
+  .decorator
     color: #B0B
-  .df
+  .definition
     color: #099
     font-weight: bold
-  .di
+  .delimiter
+    color: black
+  .directive
     color: #088
     font-weight: bold
-  .dl
-    color: black
-  .do
+  .doc
     color: #970
-  .dt
-    color: #34b
-  .ds
+  .doc-string
     color: #D42
     font-weight: bold
-  .e
-    color: #666
-    font-weight: bold
-  .en
+  .doctype
+    color: #34b
+  .entity
     color: #800
     font-weight: bold
-  .er
+  .error
     color: #F00
     background-color: #FAA
-  .ex
+  .escape
+    color: #666
+  .exception
     color: #C00
     font-weight: bold
-  .fl
+  .float
     color: #60E
-    font-weight: bold
-  .fu
+  .function
     color: #06B
     font-weight: bold
-  .gv
+  .global-variable
     color: #d70
-    font-weight: bold
-  .hx
-    color: #058
-    font-weight: bold
-  .i
-    color: #00D
-    font-weight: bold
-  .ic
+  .hex
+    color: #02b
+  .imaginary
+    color: #f00
+  .include
     color: #B44
     font-weight: bold
-  .il
-    background: #ddd
+  .inline
+    background-color: hsla(0, 0%, 0%, 0.07)
     color: black
-    .il
-      background: #ccc
-      .il
-        background: #bbb
-    .idl
-      background: #ddd
-      font-weight: bold
-      color: #666
-  .idl
-    background-color: #bbb
+  .inline-delimiter
     font-weight: bold
     color: #666
-  .im
-    color: #f00
-  .in
-    color: #B2B
-    font-weight: bold
-  .iv
+  .instance-variable
     color: #33B
-  .la
-    color: #970
-    font-weight: bold
-  .lv
-    color: #963
-  .oc
-    color: #40E
-    font-weight: bold
-  .of
-    color: #000
-    font-weight: bold
-  .op!
-  .pc
-    color: #038
-    font-weight: bold
-  .pd
-    color: #369
-    font-weight: bold
-  .pp
-    color: #579
-  .ps
-    color: #00C
-    font-weight: bold
-  .pt
-    color: #074
-    font-weight: bold
-  .r
+  .integer
+    color: #00D
+  .key
+    .char
+      color: #60f
+    .delimiter
+      color: #404
+    color: #606
+  .keyword
     color: #080
     font-weight: bold
-
-/*    (don't know)
-
-/* attribute_name_fat
-/*  attribute_name
-/*      annotation
-/* attribute_value
-/* attribute_value_fat
-/*             bin
-/*         comment
-
-/*            char
-
-/*           class
-/*       imaginary
-/*        constant
-/*           color
-/*  class_variable
-/*       decorator
-/*      definition
-/*       directive
-/*           close
-/*             doc
-/*         doctype
-/*      doc_string
-/*    (don't know)
-/*          entity
-/*           error
-/*       exception
-/*           float
-/*          method
-/* global_variable
-/*             hex
-/*         integer
-/*         include
-
-/*          inline
-
-/* inline_delimiter
-
-/*       important
-/*     interpreted
-/* instance_variable
-/*           label
-/*  local_variable
-/*             oct
-/*    operator_fat
-/*    (don't know)
-/*    pre_constant
-/*      predefined
-/*    preprocessor
-/*    pseudo_class
-/*        pre_type
-
-.kw
-  color: #080
-  font-weight: bold
-
-.CodeRay
-  .ke
-    color: #808
-    .dl
-      color: #606
-    .ch
-      color: #80f
-  .vl
-    color: #088
-  .rx
-    background-color: #fff0ff
-    .k
+  .label
+    color: #970
+    font-weight: bold
+  .local-variable
+    color: #963
+  .namespace
+    color: #707
+    font-weight: bold
+  .octal
+    color: #40E
+  .operator!
+  .predefined
+    color: #369
+    font-weight: bold
+  .predefined-constant
+    color: #069
+  .predefined-type
+    color: #0a5
+    font-weight: bold
+  .preprocessor
+    color: #579
+  .pseudo-class
+    color: #00C
+    font-weight: bold
+  .regexp
+    .content
       color: #808
-    .dl
+    .delimiter
       color: #404
-    .mod
+    .modifier
       color: #C2C
-    .fu
-      color: #404
-      font-weight: bold
-  .s
-    background-color: #fff0f0
-    color: #D20
-    .s
-      background-color: #ffe0e0
-      .s
-        background-color: #ffd0d0
-    .k!
-    .ch
-      color: #b0b
-    .dl
-      color: #710
-  .sh
-    background-color: #f0fff0
-    color: #2B2
-    .k!
-    .dl
+    background-color: hsla(300, 100%, 50%, 0.06)
+  .reserved
+    color: #080
+    font-weight: bold
+  .shell
+    .content
+      color: #2B2
+    .delimiter
       color: #161
-  .sy
-    color: #A60
-    .k
+    background-color: hsla(120, 100%, 50%, 0.06)
+  .string
+    .char
+      color: #b0b
+    .content
+      color: #D20
+    .delimiter
+      color: #710
+    .modifier
+      color: #E40
+    background-color: hsla(0, 100%, 50%, 0.05)
+  .symbol
+    .content
       color: #A60
-    .dl
+    .delimiter
       color: #630
-  .ta
+    color: #A60
+  .tag
     color: #070
-  .tf
-    color: #070
-    font-weight: bold
-  .ts
-    color: #D70
-    font-weight: bold
-  .ty
+  .type
     color: #339
     font-weight: bold
-  .v
-    color: #036
-  .xt
-    color: #444
-  .ins
-    background: #afa
-  .del
-    background: #faa
-  .chg
-    color: #aaf
+  .value
+    color: #088
+  .variable
+    color: #037
+  .insert
+    background: hsla(120, 100%, 50%, 0.12)
+  .delete
+    background: hsla(0, 100%, 50%, 0.12)
+  .change
+    color: #bbf
     background: #007
   .head
     color: #f8f
     background: #505
-  .ins .ins
-    color: #080
+    .filename
+      color: white
+  .delete .eyecatcher
+    background-color: hsla(0, 100%, 50%, 0.2)
+    border: 1px solid hsla(0, 100%, 45%, 0.5)
+    margin: -1px
+    border-bottom: none
+    border-top-left-radius: 5px
+    border-top-right-radius: 5px
+  .insert
+    .eyecatcher
+      background-color: hsla(120, 100%, 50%, 0.2)
+      border: 1px solid hsla(120, 100%, 25%, 0.5)
+      margin: -1px
+      border-top: none
+      border-bottom-left-radius: 5px
+      border-bottom-right-radius: 5px
+    .insert
+      color: #0c0
+      background: transparent
+      font-weight: bold
+  .delete .delete
+    color: #c00
+    background: transparent
     font-weight: bold
-  .del .del
-    color: #800
-    font-weight: bold
-  .chg .chg
-    color: #66f
+  .change .change
+    color: #88f
   .head .head
     color: #f4f
-
-/*             key
-
-/*           value
-
-/*          regexp
-
-/*          string
-
-/*           shell
-
-/*          symbol
-
-/*             tag
-/*         tag_fat
-/*     tag_special
-/*            type
-/*        variable
-/*        xml_text
-
-/*          insert
-/*          delete
-/*          change
-/*            head
