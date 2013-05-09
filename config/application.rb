@@ -11,7 +11,6 @@ end
 
 module Blog
   class Application < Rails::Application
-
     # disqus
     Disqus::defaults[:container_id]   = 'disqus_thread', # desired thread container
     Disqus::defaults[:avatar_size]    = 24, # squared pixel size of avatars
