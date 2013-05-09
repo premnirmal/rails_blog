@@ -1,5 +1,5 @@
 module ArticlesHelper
   def to_date(thisdate)
-    thisdate.strftime("%e %B %Y")
+    thisdate.strftime("%B %e, %Y")
   end
 end
