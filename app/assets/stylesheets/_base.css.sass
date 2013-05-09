@@ -9,12 +9,12 @@
 
 $total-col: 24
 $main-col: 16
-$nav-col: $total-col - $main-col
+$nav-col: $total-col - $main-col - 1 // leaving 1 col for spacing
 
 $article-font: baskerville
-$code-font: courier
 $title-font: futura
 $font-color: black
+$nav-font: georgia
 
 html,body
   height: 100%
@@ -26,15 +26,13 @@ banner
   margin: 0.5em 0em 0.5em 0em
   font-family: gotham
   a
-    text-decoration: none
     font-weight: bold
-    color: lighten(darkorange,20%)
-  a:visited
-    color: lighten(darkorange,20%)
   a:hover,active
-    color: darken(red,10%)
+    color: darkcyan
   home
     @include span-columns(20, $total-col)
+    a
+      padding-right: 1em
   links
     @include span-columns(4 omega, $total-col)
     text-align: right
@@ -50,5 +48,6 @@ nav
 
 main
   @include span-columns($main-col, $total-col)
+  padding: 0em 0.25em 0em 0em
   #article-head
     @include span-columns($main-col, $main-col)

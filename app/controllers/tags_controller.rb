@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+  respond_to :html
+  before_filter :get_tags
 
   def index
     @tags = Tag.all
@@ -68,4 +70,10 @@ class TagsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def get_tags
+    @tags = Tag.all
+    @articles = Article.all
+  end
+
 end

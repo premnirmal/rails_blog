@@ -100,6 +100,7 @@ GEM
     fssm (0.2.10)
     has_scope (0.5.1)
     hashie (2.0.4)
+    high_voltage (1.2.2)
     hike (1.2.2)
     i18n (0.6.1)
     inherited_resources (1.4.0)
@@ -244,6 +245,7 @@ DEPENDENCIES
   disqus
   factory_girl_rails
   font-awesome-rails
+  high_voltage
   jquery-rails
   json
   minitest-reporters

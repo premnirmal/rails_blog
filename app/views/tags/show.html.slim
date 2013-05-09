@@ -1,0 +1,13 @@
+p#notice = notice
+
+center
+  h2 = @tag.name
+  
+  ul
+    li
+      - @tag.articles.each do |a|
+        h3 = link_to a.title, a
+        strong 
+          i class="icon-double-angle-left"
+          = " " + a.updated_at.strftime("%e %B %Y") + " "
+          i class="icon-double-angle-right"

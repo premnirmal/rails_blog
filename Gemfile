@@ -8,9 +8,13 @@ gem 'rufus-scheduler' # to keep app loaded on heroku, prevent it from shutting d
 gem 'compass'
 gem 'compass-normalize'
 gem 'truncate_html'
+
+# for adding source code snippets
 gem 'coderay'
 gem 'RedCloth'
 gem 'redcarpet'
+
+gem 'high_voltage'
 
 gem 'carrierwave'
 gem 'cloudinary'

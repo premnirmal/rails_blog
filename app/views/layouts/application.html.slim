@@ -1,7 +1,7 @@
 doctype html
 html
   head
-    title = 'railswithprem'
+    title = "Prem's blog"
     = stylesheet_link_tag "application", :media => "all"
     = javascript_include_tag "application"
     = csrf_meta_tags
@@ -13,9 +13,9 @@ html
     wrapper
       banner
         home
-          = link_to 'Rails with Prem', articles_path
+          = link_to 'Blog', articles_path
+          = link_to 'About', page_path('about')
         links
-          = link_to 'About', nil
           = link_to 'https://github.com/premnirmal88' do
             i class="icon-github-alt icon-large"
           = link_to 'http://gplus.to/premnirmal88' do

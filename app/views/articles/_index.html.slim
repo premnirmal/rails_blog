@@ -1,9 +1,6 @@
 ul
-  h3 Articles
-  - @articles.each do |article|
-    li = link_to article.title.downcase, article
+  /limit to 10 articles
+  - @articles.sort_by{|a| a.updated_at}.take(10).each do |article|
+    li = link_to article.title, article
 
-ul
-  h3 Tags
-  - @tags.each do |tag|
-    li = tag
+= render 'tags/index'
