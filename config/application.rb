@@ -13,7 +13,6 @@ module Blog
   class Application < Rails::Application
 
     # disqus
-    Disqus::defaults[:developer]      = false, # allows threads to work on localhost
     Disqus::defaults[:container_id]   = 'disqus_thread', # desired thread container
     Disqus::defaults[:avatar_size]    = 24, # squared pixel size of avatars
     Disqus::defaults[:color]          = 'grey', # theme color
