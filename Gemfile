@@ -19,7 +19,7 @@ gem 'high_voltage'
 gem 'carrierwave'
 gem 'cloudinary'
 
-gem 'activeadmin'
+gem 'activeadmin', :git => "git://github.com/gregbell/active_admin.git"
 gem 'disqus'
 
 group :development do
