@@ -21,6 +21,7 @@ module Blog
     Disqus::defaults[:developer] = true # if you want to test it on the localhost
 
     config.assets.initialize_on_precompile = false
+#    config.precompile += %w(coderay.css.sass)
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
