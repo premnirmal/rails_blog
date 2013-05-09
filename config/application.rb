@@ -12,6 +12,14 @@ end
 module Blog
   class Application < Rails::Application
 
+    # disqus
+    Disqus::defaults[:developer]      = false, # allows threads to work on localhost
+    Disqus::defaults[:container_id]   = 'disqus_thread', # desired thread container
+    Disqus::defaults[:avatar_size]    = 24, # squared pixel size of avatars
+    Disqus::defaults[:color]          = 'grey', # theme color
+    Disqus::defaults[:account] = 'railswithprem'
+    Disqus::defaults[:developer] = true # if you want to test it on the localhost
+
     config.assets.initialize_on_precompile = false
 
     # Settings in config/environments/* take precedence over those specified here.
