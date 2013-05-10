@@ -9,7 +9,7 @@ ActiveAdmin.register Article do
         end        
       end
     end
-
+    f.actions
   end
 
 end
