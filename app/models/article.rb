@@ -9,10 +9,4 @@ class Article < ActiveRecord::Base
 
   validates_presence_of [:body, :title]
 
-  def title=(val)
-    if val != nil
-      write_attribute(:title, val.titleize) 
-    end
-  end
-
 end
