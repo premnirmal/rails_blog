@@ -1,35 +1,22 @@
 class ArticlesController < ApplicationController
   respond_to :html
+  before_filter :find_article, only: [:show, :edit, :update, :destroy]
   before_filter :get_articles
 
   def index
-    @articles = Article.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @articles }
-    end
+    respond_with(@articles)
   end
 
   def show
-    @article = Article.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @article }
-    end
+    respond_with(@article)
   end
 
   def new
-    @article = Article.new
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @article }
-    end
+    respond_with(@article)
   end
 
   def edit
-    @article = Article.find(params[:id])
+    respond_with(@article)
   end
 
   def create
@@ -46,17 +33,8 @@ class ArticlesController < ApplicationController
   end
 
   def update
-    @article = Article.find(params[:id])
-
-    respond_to do |format|
-      if @article.update_attributes(params[:article])
-        format.html { redirect_to @article, notice: 'Article was successfully updated.' }
-        format.json { head :no_content }
-      else
-        format.html { render action: "edit" }
-        format.json { render json: @article.errors, status: :unprocessable_entity }
-      end
-    end
+    flash_notice('updated') if @article.update_attributes(params[:article])
+    respond_with(@article)
   end
 
   def destroy
@@ -70,10 +48,18 @@ class ArticlesController < ApplicationController
   end
 
   private
+
   def get_articles
     @articles = Article.all
     @tags = Tag.all
   end
 
+  def find_article
+    @article = Article.find(params[:id])
+  end
+
+  def flash_notice(msg)
+    flash[:notice] = "#{@article.title} #{msg}"
+  end
 
 end

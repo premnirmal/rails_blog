@@ -9,5 +9,5 @@ center
         h3 = link_to a.title, a
         strong 
           i class="icon-double-angle-left"
-          = " " + a.updated_at.strftime("%e %B %Y") + " "
+          = " " + to_date(a.updated_at) + " "
           i class="icon-double-angle-right"

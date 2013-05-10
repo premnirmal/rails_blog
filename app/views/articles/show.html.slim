@@ -9,9 +9,12 @@ center
 p
   = markdown(@article.body)
 
-p
-  h3 Tags:
-  = @article.tags.join(", ")
+- unless @article.tags.empty?
+  p
+    h3 Tags:
+    = @article.tags.join(", ")
 
+br
+hr
 p
   = raw(disqus_thread)
