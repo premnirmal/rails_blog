@@ -16,7 +16,6 @@ gem 'redcarpet'
 
 gem 'high_voltage'
 
-gem 'carrierwave'
 gem 'cloudinary'
 
 gem 'activeadmin', :git => "git://github.com/gregbell/active_admin.git"
@@ -31,7 +30,6 @@ group :production do
 end
 
 group :development, :test do
-  gem 'minitest-reporters'
   gem 'rspec-rails'
   gem 'factory_girl_rails'
 end
@@ -47,9 +45,6 @@ group :assets do
   gem 'susy'
   gem 'font-awesome-rails'
   gem 'compass-susy-plugin'
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
-  gem 'sassy-buttons'
   gem 'uglifier', '>= 1.0'
   gem 'slim-rails'
 end
