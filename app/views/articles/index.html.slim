@@ -5,5 +5,5 @@
       i class="icon-double-angle-left"
       = " " + to_date(article.updated_at) + " "
       i class="icon-double-angle-right"
-    p = truncate_html(markdown(article.body), length: 50)
+    p = truncate_html(markdown(article.body), length: 100)
     hr width="50%"
