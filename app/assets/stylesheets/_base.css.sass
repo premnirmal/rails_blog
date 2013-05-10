@@ -13,12 +13,13 @@ $nav-col: $total-col - $main-col - 1 // leaving 1 col for spacing
 
 $article-font: baskerville
 $title-font: futura
-$font-color: black
+$font-color: darken(darkgrey,50%)
 $nav-font: georgia
 
 html,body
   height: 100%
   margin: 0em
+  color: $font-color
 
 banner
   @include span-columns($total-col, $total-col)
