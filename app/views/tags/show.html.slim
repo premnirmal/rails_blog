@@ -3,7 +3,7 @@ p#notice = notice
 center
   h1 = @tag.name
   
-  - @tag.articles.each do |a|
+  - @tag.articles.reverse.each do |a|
     h3 = link_to a.title, a
     strong 
       i class="icon-double-angle-left"
