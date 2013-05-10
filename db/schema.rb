@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130509012952) do
+ActiveRecord::Schema.define(:version => 20130510192740) do
 
   create_table "active_admin_comments", :force => true do |t|
     t.string   "resource_id",   :null => false
@@ -46,16 +46,6 @@ ActiveRecord::Schema.define(:version => 20130509012952) do
   add_index "admin_users", ["email"], :name => "index_admin_users_on_email", :unique => true
   add_index "admin_users", ["reset_password_token"], :name => "index_admin_users_on_reset_password_token", :unique => true
 
-  create_table "article_tags", :force => true do |t|
-    t.integer  "article_id"
-    t.integer  "tag_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  add_index "article_tags", ["article_id"], :name => "index_article_tags_on_article_id"
-  add_index "article_tags", ["tag_id"], :name => "index_article_tags_on_tag_id"
-
   create_table "articles", :force => true do |t|
     t.string   "title"
     t.text     "body"
@@ -63,13 +53,17 @@ ActiveRecord::Schema.define(:version => 20130509012952) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "tags", :force => true do |t|
-    t.string   "name"
+  create_table "taggings", :force => true do |t|
     t.integer  "article_id"
+    t.integer  "tag_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
 
-  add_index "tags", ["article_id"], :name => "index_tags_on_article_id"
+  create_table "tags", :force => true do |t|
+    t.string   "name"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
 end

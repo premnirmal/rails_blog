@@ -13,19 +13,6 @@ ActiveAdmin.register_page "Dashboard" do
       end
       strong {link_to "View all articles", admin_articles_path}
     end
-    br
-    hr
-    br
-    section "Recent tags" do
-      table_for Tag.order("updated_at desc").limit(5) do
-        column :name do |t|
-          link_to t, [:admin, t]
-        end
-        column :updated_at
-      end
-      strong {link_to "View all tags", admin_tags_path}
-    end
-    
 
   end # content
 end

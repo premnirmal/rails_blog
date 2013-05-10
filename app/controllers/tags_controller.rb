@@ -1,4 +1,4 @@
-class TagsController < ApplicationController
+class TagsController < InheritedResources::Base
   respond_to :html
   before_filter :find_tag, only: [:show, :edit, :update, :destroy]
   before_filter :get_tags
@@ -21,10 +21,15 @@ class TagsController < ApplicationController
 
   def create
     @tag = Tag.new(params[:tag])
-      if @tag.save!
-        flash_notice('created')
+    respond_to do |format|
+      if @tag.save
+        format.html { redirect_to @tag, notice: 'Tag was successfully created.' }
+        format.json { render json: @tag, status: :created, location: @tag }
+      else
+        format.html { render action: "new" }
+        format.json { render json: @tag.errors, status: :unprocessable_entity }
       end
-    respond_with(@tag)
+    end
   end
 
   def update
@@ -33,8 +38,13 @@ class TagsController < ApplicationController
   end
 
   def destroy
+    @tag = Tag.find(params[:id])
     @tag.destroy
-    flash_notice('deleted')
+
+    respond_to do |format|
+      format.html { redirect_to tags_url }
+      format.json { head :no_content }
+    end
   end
 
   private
@@ -49,7 +59,7 @@ class TagsController < ApplicationController
   end
 
   def flash_notice(msg)
-    flash[:notice] = "#{@tag.name} #{msg}"
+    flash[:notice] = "#{@tag.title} #{msg}"
   end
 
 end
