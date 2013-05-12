@@ -1,6 +1,5 @@
 ul
-  /limit to 10 articles
-  - @articles.reverse.take(8).each do |article|
+  - @articles.sort_by{|a| a.created_at}.reverse.each do |article|
     li = link_to article.title.downcase, article
 
 = render 'tags/index'

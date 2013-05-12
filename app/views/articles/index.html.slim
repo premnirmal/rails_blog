@@ -1,4 +1,4 @@
-- @articles.reverse.each do |article|
+- @articles.sort_by{|a| a.created_at}.reverse.take(5).each do |article|
   center
     h2 = link_to article.title, article
     strong 
