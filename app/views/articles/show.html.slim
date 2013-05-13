@@ -4,7 +4,7 @@ center
   h1 = @article.title
   h3 
     i class="icon-chevron-left"
-    = " " + to_date(@article.updated_at) + " "
+    = " " + to_date(@article.created_at) + " "
     i class="icon-chevron-right"
 p
   = markdown(@article.body)

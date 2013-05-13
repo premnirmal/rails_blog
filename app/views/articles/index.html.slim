@@ -3,7 +3,7 @@
     h2 = link_to article.title, article
     strong 
       i class="icon-double-angle-left"
-      = " " + to_date(article.updated_at) + " "
+      = " " + to_date(article.created_at) + " "
       i class="icon-double-angle-right"
     p = truncate_html(markdown(article.body), length: 100)
     hr width="50%"
