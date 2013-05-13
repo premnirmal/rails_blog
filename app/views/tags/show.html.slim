@@ -1,7 +1,7 @@
 p#notice = notice
 
 center
-  h1 = @tag.name
+  h1 = @tag.name.downcase
   
   - @tag.articles.sort_by{|a| a.created_at}.reverse.each do |a|
     h3 = link_to a.title, a
