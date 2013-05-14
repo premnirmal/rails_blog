@@ -1,6 +1,6 @@
 h3 Archive
 ul
-  - @articles.sort_by{|a| a.created_at}.reverse.each do |article|
+  - @articles.each do |article|
     li = link_to article.title.downcase, article
 
 = render 'tags/index'

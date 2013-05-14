@@ -50,8 +50,8 @@ class ArticlesController < ApplicationController
   private
 
   def get_articles
-    @articles = Article.all
-    @tags = Tag.all
+    @articles = Article.order('created_at DESC')
+    @tags = Tag.order('name')
   end
 
   def find_article

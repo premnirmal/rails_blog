@@ -50,8 +50,8 @@ class TagsController < InheritedResources::Base
   private
 
   def get_tags
-    @tags = Tag.all
     @articles = Article.all
+    @tags = Tag.order('name')
   end
 
   def find_tag
