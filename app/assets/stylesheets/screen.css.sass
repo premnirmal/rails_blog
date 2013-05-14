@@ -11,6 +11,8 @@ a:hover,active
   color: $a-color
 
 main
+  #main-wrapper
+    padding: 0em 0.75em 0em 0.75em
   font-family: $article-font
   a
     text-decoration: none
@@ -52,23 +54,29 @@ wrapper
 header
   margin: 0em 0em 0.25em 0em
   border-bottom: 1px solid lightgrey
-  text-align: center
-  h2
+  h1,h2
     font-family: $title-font
     font-weight: none
+    color: dimgrey
+    display: inline
+  h1
+    font-size: 6em
+    line-height: 1.25em
+  h2
+    font-size: 1.5em
 
 nav
   font-family: $nav-font
   h3
-    margin: 2em 0em 0em 0em
-    padding: 0em
+    margin: 1em 0em 0em 0em
+    padding: 0.5em
   ul
-    padding-left: 0em
-    margin-left: 0em
+    padding: 0.5em
+    margin-left: 1.25em
   li
     list-style-type: lower-greek
     margin-left: 0em
-    padding-left: 0em
+    padding: 0.5
 
 #footer
   text-align: center

@@ -10,7 +10,8 @@ html
   .stripe
   body id="content"
     header
-      h2 Rails with Prem
+      h1 Rails
+      h2 &nbsp with prem
     wrapper
       banner
         home
@@ -23,7 +24,8 @@ html
             i class="icon-google-plus icon-large"
           
       main
-        = yield        
+        #main-wrapper
+          = yield  
       nav
         = render :partial => 'articles/index', :locals => {:articles => @articles}
 

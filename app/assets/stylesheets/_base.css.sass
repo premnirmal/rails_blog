@@ -6,10 +6,13 @@
 
 @include establish-baseline
 
-$total-col: 24
-$main-col: 16
-$nav-col: $total-col - $main-col - 2 // leaving 1 col for spacing
-
+$total-col: 10
+$main-col: $total-col * 2/3
+$nav-col: $total-col * 1/3 - 0.25
+$breakpoint: 40em
+$column-width: 4em
+$gutter-width: 1em
+$grid-padding: $gutter-width
 $article-font: baskerville, perpetua, georgia
 $title-font: proxima-nova, futura, baskerville
 $font-color: darken(darkgrey,50%)
@@ -21,6 +24,7 @@ body
   height: 100%
   margin: 0em
   color: $font-color
+  background: url(bg.gif) repeat
 
 hr
   border: 0
@@ -36,11 +40,11 @@ banner
   a
     font-weight: bold
   home
-    @include span-columns(20, $total-col)
+    @include span-columns($total-col * 2/3, $total-col)
     a
       padding-right: 1em
   links
-    @include span-columns(4 omega, $total-col)
+    @include span-columns($total-col * 1/5 omega, $total-col)
     text-align: right
     a
       padding-left: 1em
@@ -48,12 +52,20 @@ banner
 #content
   @include container
   font-family: $article-font
+  @include at-breakpoint($breakpoint 24)
+    @include container
 
 nav
-  @include span-columns($nav-col omega, $total-col)
-
+  @include span-columns(0, $total-col)
+  @include at-breakpoint($breakpoint 24)
+    @include span-columns($nav-col omega, $total-col)
+  background: white
+  margin: 0em
 main
-  @include span-columns($main-col, $total-col)
-  padding: 0em 0.25em 0em 0em
+  @include span-columns($total-col, $total-col)
+  @include at-breakpoint($breakpoint 24)
+    @include span-columns($main-col, $total-col)
+    margin: 0em
+  background: white
   #article-head
     @include span-columns($main-col, $main-col)
