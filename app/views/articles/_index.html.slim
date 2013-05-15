@@ -1,6 +1,6 @@
 h3 Archive
 ol
-  - @articles.each do |article|
+  - @navarticles.each do |article|
     li = link_to article.title.downcase, article
 
 = render 'tags/index'
