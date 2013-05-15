@@ -52,7 +52,7 @@ class ArticlesController < ApplicationController
   def get_articles
     @navarticles = Article.select('title, created_at, id').order('created_at DESC')
     @articles = Article.order('created_at DESC').limit(4)
-    @tags = Tag.order('name')
+    @tags = Tag.select('name, id').order('name')
   end
 
   def find_article

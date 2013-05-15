@@ -51,7 +51,7 @@ class TagsController < InheritedResources::Base
 
   def get_tags
     @navarticles = Article.select('title, created_at, id').order('created_at DESC')
-    @tags = Tag.order('name')
+    @tags = Tag.select('name, id').order('name')
   end
 
   def find_tag
