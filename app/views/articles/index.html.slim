@@ -1,4 +1,4 @@
-- @articles.each do |article|
+- @articles.limit(5).each do |article|
   center
     h2 = link_to article.title, article
     strong 

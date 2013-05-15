@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
   private
 
   def get_articles
-    @articles = Article.order('created_at DESC').limit(5)
+    @articles = Article.order('created_at DESC')
     @tags = Tag.order('name')
   end
 
