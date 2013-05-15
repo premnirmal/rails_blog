@@ -29,9 +29,10 @@ main
   h1,h2
     text-align: center
   ol
+    margin-left: 0.5em
     li
       list-style-type: lower-greek
-      padding-left: 1em
+      padding-left: 0.5em
   ul
     margin-left: 0.5em
     li
@@ -48,8 +49,8 @@ main
 
 .stripe
   width: full
-  background-image: -webkit-linear-gradient(0deg, darkorange 25%, coral 25%, lightsalmon 55%, salmon 45%, indianred 75%, sienna 75%)
-  height: 3px
+  background-image: -webkit-linear-gradient(0deg, darkorange 25%, coral 25%, lightsalmon 45%, darksalmon 65%, indianred 75%, darken(indianred,10%) 85%)
+  height: 4px
 
 wrapper
   margin: 0 auto 5em
@@ -60,7 +61,6 @@ wrapper
 header
   color: darken(dimgrey, 10%)
   margin: 0em 0em 0.25em 0em
-  border-bottom: 1px solid lightgrey
   h1,h2
     font-family: $title-font
     font-weight: none
@@ -77,10 +77,12 @@ nav
   h3
     margin: 1em 0em 0em 0em
     padding: 0.5em
-  li
-    list-style-type: lower-greek
-    margin-left: 0em
-    padding: 0.5
+  ol
+    margin-top: 0em
+    li
+      list-style-type: lower-greek
+      margin-left: 0em
+      margin-right: 0.5em
 
 #footer
   text-align: center
