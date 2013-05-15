@@ -3,7 +3,7 @@ class PagesController < HighVoltage::PagesController
 
   private
   def get_all
-    @navarticles = Article.order('created_at DESC')
+    @navarticles = Article.select('title, created_at, id').order('created_at DESC')
     @tags = Tag.order('name')
   end
 
