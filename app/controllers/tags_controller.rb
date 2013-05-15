@@ -50,7 +50,7 @@ class TagsController < InheritedResources::Base
   private
 
   def get_tags
-    @articles = Article.all
+    @navarticles = Article.select('title, created_at, id').order('created_at DESC')
     @tags = Tag.order('name')
   end
 
