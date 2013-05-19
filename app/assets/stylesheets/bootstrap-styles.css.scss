@@ -1,0 +1,12 @@
+$navbarBackground:                lightsteelblue;
+$navbarBackgroundHighlight:       lighten(lightsteelblue,10%);
+$navbarText:                      dimgrey;
+$navbarLinkColor:                 dimgrey;
+$navbarSearchPlaceholderColor:    white;
+$navbarHeight:                    60px;
+
+@import 'twitter/bootstrap';
+
+body { padding-top: 100px; }
+
+@import 'twitter/bootstrap/responsive';

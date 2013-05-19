@@ -51,6 +51,9 @@ GEM
     arel (3.0.2)
     aws_cf_signer (0.1.1)
     bcrypt-ruby (3.0.1)
+    bootstrap-sass-rails (2.3.1.2)
+      railties (>= 3.1.0)
+      sass-rails (>= 3.1.0)
     bourbon (3.1.6)
       sass (>= 3.2.0)
       thor
@@ -222,6 +225,7 @@ PLATFORMS
 DEPENDENCIES
   RedCloth
   activeadmin!
+  bootstrap-sass-rails
   cloudinary
   coderay
   coffee-rails (~> 3.2)

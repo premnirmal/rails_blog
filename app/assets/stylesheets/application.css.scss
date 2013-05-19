@@ -11,6 +11,6 @@
  *= require_self
  */
 
-@import base
-@import screen
-@import coderay
+@import 'coderay';
+@import 'bootstrap-styles';
+@import 'screen';

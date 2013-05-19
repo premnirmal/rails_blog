@@ -1,72 +1,31 @@
-@import susy
-@import normalize
-@import "compass/typography/vertical_rhythm"
-@import "compass/css3"
+@import url(http://fonts.googleapis.com/css?family=Cabin)
+@import url(http://fonts.googleapis.com/css?family=Montserrat)
 @import font-awesome
 
-@include establish-baseline
-
-$total-col: 10
-$main-col: $total-col * 2/3
-$nav-col: $total-col * 1/3 - 0.25
-$breakpoint: 30em
-$column-width: 4em
-$gutter-width: 1em
-$grid-padding: $gutter-width
-$article-font: baskerville, perpetua, georgia
-$title-font: proxima-nova, futura, baskerville
-$font-color: darken(darkgrey,50%)
+$article-font: georgia
+$title-font: Cabin, futura, baskerville
+$font-color: darken(darkgrey,40%)
 $nav-font: georgia, bodoni
 $a-color: darkcyan
 $a-color-alt: darken(darkcyan,10%)
 
 body
-  height: 100%
-  margin: 0em
-  color: $font-color
-  background: url(bg.gif) repeat
-
+	height: 100%
+	margin: 0em
+	color: $font-color
+	background: url(bg.gif) repeat
 hr
-  border: 0
-  height: 0
-  border-top: 1px solid rgba(0, 0, 0, 0.1)
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3)
-
-banner
-  @include span-columns($total-col, $total-col)
-  clear: both
-  margin: 0.5em 0em 0.5em 0em
-  font-family: gotham
-  a
-    font-weight: bold
-  home
-    @include span-columns($total-col * 2/3, $total-col)
-    a
-      padding-right: 1em
-  links
-    @include span-columns($total-col * 1/5 omega, $total-col)
-    text-align: right
-    a
-      padding-left: 1em
-
-#content
-  @include container
-  font-family: $article-font
-  @include at-breakpoint($breakpoint 24)
-    @include container
-
-nav
-  @include span-columns(0, $total-col)
-  @include at-breakpoint($breakpoint 24)
-    @include span-columns($nav-col omega, $total-col)
-  width: 100%
-  background: white
-  margin: 0em
-main
-  @include span-columns($total-col, $total-col)
-  @include at-breakpoint($breakpoint 24)
-    @include span-columns($main-col, $total-col)
-    margin: 0em
-  background: white
-  #article-head
-    @include span-columns($main-col, $main-col)
+	border: 0
+	height: 0
+	border-top: 1px solid rgba(0, 0, 0, 0.1)
+	border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+.span9, .span3
+	background-color: white
+body
+	table
+		margin-top: 1em
+		p
+			text-align: justify
+			margin-top: 1em
+		td
+			padding: 0em 1em 0em 0em

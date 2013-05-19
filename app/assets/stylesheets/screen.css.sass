@@ -1,5 +1,27 @@
 @import base
 
+#main-container, #nav-container
+  padding: 1em
+
+.navbar
+  .pull-right
+    padding-top: 1em
+  a
+    i
+      color: darkorange
+  .brand
+    padding-top: 0.5em
+    color: darkorange
+    font-family: Montserrat
+    font-size: 4em
+  .brand:hover
+    color: dimgrey
+  .small
+    display: inline
+    font-size: 18px
+    color: dimgrey
+  .btn-navbar
+    margin-top: 25px
 
 a
   text-decoration: none
@@ -9,13 +31,11 @@ a:visited
   color: $a-color-alt
 a:hover,active
   color: $a-color
+  text-decoration: none
 
-main
-  #main-wrapper
-    padding: 0em 0.75em 0em 0.75em
+.span9
   font-family: $article-font
   a
-    text-decoration: none
     font-weight: none
     color: $a-color
   a:visited
@@ -28,16 +48,18 @@ main
     font-family: $title-font
   h1,h2
     text-align: center
+  h4
+    display: inline
   ol
     margin-left: 0.5em
     li
       list-style-type: lower-greek
       padding-left: 0.5em
   ul
-    margin-left: 0.5em
+    margin-left: 1.75em
     li
       list-style-type: square
-      padding-left: 0.5em
+      padding-left: 0.25em
   table
     margin-top: 1em
     p
@@ -45,38 +67,18 @@ main
       margin-top: 0em
     td
       padding: 0em 1em 0em 0em
-
+  p
+    margin-top: 1.5em
 
 .stripe
   width: full
   background-image: -webkit-linear-gradient(0deg, darkorange 25%, coral 25%, lightsalmon 45%, darksalmon 65%, indianred 75%, darken(indianred,10%) 85%)
   height: 4px
 
-wrapper
-  margin: 0 auto 5em
-  min-height: 100%
-  height: auto !important
-  height: 100%
-
-header
-  color: darken(dimgrey, 10%)
-  margin: 0em 0em 0.25em 0em
-  h1,h2
-    font-family: $title-font
-    font-weight: none
-    display: inline
-  h1
-    font-size: 8em
-    line-height: 1.25em
-    color: darkorange
-  h2
-    font-size: 1.5em
-
-nav
+.span3
   font-family: $nav-font
   h3
-    margin: 1em 0em 0em 0em
-    padding: 0.5em
+    font-family: $title-font, futura
   ol
     margin-top: 0em
     li
@@ -88,7 +90,5 @@ nav
   text-align: center
   font-family: warnock-pro
   color: darken(dimgrey, 10%)
-
-#footer,#push
-  height: 5em
+  margin: 2em
   clear: both

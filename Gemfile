@@ -47,6 +47,7 @@ group :assets do
   gem 'compass-susy-plugin'
   gem 'uglifier', '>= 1.0'
   gem 'slim-rails'
+  gem 'bootstrap-sass-rails'
 end
 
 gem 'jquery-rails'
