@@ -51,7 +51,9 @@ class TagsController < InheritedResources::Base
 
   def get_tags
     @navarticles = Article.select('title, created_at, id').order('created_at DESC')
-    @tags = Tag.select('name, id').order('name')
+      .group_by { |article| article.created_at.strftime("%B %Y") }
+    @tags = Tag.joins(:taggings).select('tags.*, count(tag_id) as "tag_count"')
+      .group(:tag_id).order(' tag_count DESC')
   end
 
   def find_tag

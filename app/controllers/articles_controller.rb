@@ -51,8 +51,10 @@ class ArticlesController < ApplicationController
 
   def get_articles
     @navarticles = Article.select('title, created_at, id').order('created_at DESC')
+      .group_by { |article| article.created_at.strftime("%B %Y") }
     @articles = Article.order('created_at DESC').limit(4)
-    @tags = Tag.select('name, id').order('name')
+    @tags = Tag.joins(:taggings).select('tags.*, count(tag_id) as "tag_count"')
+      .group(:tag_id).order(' tag_count DESC')
   end
 
   def find_article

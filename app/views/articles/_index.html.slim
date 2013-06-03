@@ -1,6 +1,12 @@
 h3 Archive
 ul
-  - @navarticles.each do |article|
-    li = link_to article.title.downcase, article
-
+  - @navarticles.each do |monthname, articles|
+    li 
+      = link_to monthname, "#", :onclick => "return CollapseExpand('#{monthname.split().first.to_s}')"
+      = ' (' + articles.count.to_s + ')'
+      div id='#{monthname.split().first.to_s}' class=('divHidden')
+        ul
+          - articles.each do |ar|
+            li = link_to ar.title.downcase, ar
+    
 = render 'tags/index'
