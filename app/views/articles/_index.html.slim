@@ -2,7 +2,7 @@ h3 Archive
 ul
   - @navarticles.each do |monthname, articles|
     li 
-      = link_to monthname, "#", :onclick => "return CollapseExpand('#{monthname.split().first.to_s}')"
+      = link_to monthname, "javascript:;", :onclick => "return CollapseExpand('#{monthname.split().first.to_s}')"
       = ' (' + articles.count.to_s + ')'
       div id='#{monthname.split().first.to_s}' class=('divHidden')
         ul
